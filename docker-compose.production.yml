@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 volumes:
   pg_data:
@@ -7,17 +7,14 @@ volumes:
 
 services:
   db:
-    image: postgres:13
-    container_name: kittygram_db
+    image: postgres:13.10
     env_file:
       - .env
     volumes:
       - pg_data:/var/lib/postgresql/data
 
   backend:
-    build:
-      context: ./backend
-    container_name: kittygram_backend
+    image: vladimir757/kittygram_backend
     env_file:
       - .env
     volumes:
@@ -27,16 +24,12 @@ services:
       - db
 
   frontend:
-    build:
-      context: ./frontend
-    container_name: kittygram_frontend
+    image: vladimir757/kittygram_frontend
     volumes:
       - static:/app/build
 
   gateway:
-    build:
-      context: ./nginx
-    container_name: kittygram_gateway
+    image: vladimir757/kittygram_gateway
     ports:
       - "9000:80"
     volumes:
