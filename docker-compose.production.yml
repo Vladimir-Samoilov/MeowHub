@@ -22,6 +22,13 @@ services:
       - media:/app/media
     depends_on:
       - db
+    command: >
+      sh -c "
+        sleep 10 &&
+        python manage.py migrate &&
+        python manage.py collectstatic --noinput &&
+        gunicorn kittygram_backend.wsgi:application --bind 0.0.0.0:8000
+      "
 
   frontend:
     image: vladimir757/kittygram_frontend
