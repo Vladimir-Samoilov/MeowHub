@@ -24,8 +24,8 @@ MeowHub — это веб-приложение для любителей кош�
 ### Клонирование репозитория
 
 ```bash
-git clone https://github.com/Vladimir-Samoilov/kittygram_final.git
-cd kittygram_final
+git clone https://github.com/Vladimir-Samoilov/MeowHub.git
+cd MeowHub
 ```
 
 *(Если переименуете репозиторий — обновите ссылку!)*
@@ -80,7 +80,3 @@ DB_PORT=5432
 
 Автор: Владимир Самойлов  
 GitHub: [Vladimir-Samoilov](https://github.com/Vladimir-Samoilov)
-
----
-
-Проект выполнен в рамках учебной программы Яндекс Практикум.
