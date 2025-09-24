@@ -28,7 +28,6 @@ git clone https://github.com/Vladimir-Samoilov/MeowHub.git
 cd MeowHub
 ```
 
-*(Если переименуете репозиторий — обновите ссылку!)*
 
 ### Запуск с помощью Docker
 
